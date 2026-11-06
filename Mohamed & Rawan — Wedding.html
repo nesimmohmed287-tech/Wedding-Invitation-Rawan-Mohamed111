@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mohamed &amp; Rawan — Wedding</title>
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Cairo:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4e7e1;--card:#fbf3ee;--navy:#2c3a68;--blue:#8097c0;--rose:#d9a5a0;--gold:#d8b46a;--line:#d8c7be;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2a2030;--card:#3a2d42;--navy:#f1e6ea;--blue:#a9b9dc;--line:#6a5870}}
+:root[data-theme="dark"]{--bg:#2a2030;--card:#3a2d42;--navy:#f1e6ea;--blue:#a9b9dc;--line:#6a5870}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;background:var(--bg);color:var(--navy);font-family:'Cormorant Garamond',Georgia,serif;font-size:19px;text-align:center;
+background-image:radial-gradient(circle,#d9a5a022 2px,transparent 3px);background-size:46px 46px}
+section{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:44px 22px;position:relative}
+.script{font-family:'Great Vibes','Brush Script MT',cursive;font-weight:400}
+h2{font-family:'Great Vibes','Brush Script MT',cursive;font-weight:400;font-size:3.2rem;margin:0 0 8px;color:var(--navy)}
+.sm{letter-spacing:.28em;font-size:.72rem;text-transform:uppercase;color:var(--blue);font-weight:600}
+p{margin:6px 0;line-height:1.7;max-width:340px}
+.rv{opacity:0;transform:translateY(26px);transition:opacity 1s,transform 1s}.rv.in{opacity:1;transform:none}
+
+/* frame */
+.frame{position:relative;width:min(92vw,400px);padding:56px 26px 46px;background:var(--card);border:2px solid var(--line);border-radius:36px;box-shadow:inset 0 0 0 8px var(--card),inset 0 0 0 10px var(--line),0 24px 60px #8a5a6a30}
+.frame>svg{position:absolute;left:0;top:-34px;width:100%;height:150px;pointer-events:none}
+.mono{font-family:'Great Vibes',cursive;font-size:2.2rem;color:var(--blue);letter-spacing:.05em}
+.names{font-size:4.4rem;line-height:1.02;margin:6px 0}
+.names .amp{display:block;font-size:2.6rem;color:var(--rose);margin:-4px 0}
+.date{font-style:italic;font-size:1.5rem;margin-top:14px}
+.hint{position:absolute;bottom:26px;font-size:1.6rem;color:var(--blue);animation:bob 2s infinite}
+@keyframes bob{50%{transform:translateY(7px)}}
+
+/* countdown */
+.lights{width:100%;max-width:560px;height:90px;margin-bottom:26px}
+.lights circle{animation:tw 2.4s infinite}.lights circle:nth-child(odd){animation-delay:1.2s}
+@keyframes tw{50%{opacity:.4}}
+.cd{display:flex;gap:16px;margin:18px 0 8px}
+.cd div{min-width:64px}.cd b{display:block;font-size:2.7rem;font-weight:600;line-height:1}.cd small{letter-spacing:.2em;font-size:.58rem;color:var(--blue);font-weight:600}
+
+/* venue */
+.arch{width:min(86vw,330px);padding:70px 24px 40px;margin-top:10px;color:#fff;background:linear-gradient(#aebfdc,#8097c0);border-radius:50% 50% 18px 18px/28% 28% 18px 18px;box-shadow:inset 0 3px 10px #fff8,inset 0 -6px 14px #5a6f9a66,0 18px 40px #5a6f9a44}
+.arch .sm{color:#eef2fb}.arch h3{font-family:'Great Vibes',cursive;font-weight:400;font-size:2.4rem;margin:6px 0}
+.btn{display:inline-block;margin-top:16px;padding:12px 28px;border-radius:40px;border:1.5px solid currentColor;color:inherit;text-decoration:none;font:inherit;font-weight:600;background:transparent;cursor:pointer}
+.btn.fill{background:var(--navy);color:var(--card);border-color:var(--navy)}
+.arch .btn{color:#fff}
+.tl{white-space:nowrap;margin-top:26px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:16px 26px;display:flex;gap:22px;align-items:baseline}
+.tl b{font-size:1.6rem}
+
+/* rsvp */
+form{width:min(92vw,380px);text-align:left;background:var(--card);padding:24px;border-radius:22px;box-shadow:0 14px 40px #8a5a6a22;border:1px solid var(--line)}
+label{display:block;font-size:.8rem;letter-spacing:.14em;color:var(--blue);font-weight:600;margin:14px 0 4px;text-transform:uppercase}
+input[type=text],input[type=number],textarea{width:100%;border:0;border-bottom:1.5px solid var(--line);background:transparent;padding:8px 2px;font:inherit;color:var(--navy);outline:none}
+textarea{resize:none;height:64px}
+.opt{display:flex;gap:10px;margin:8px 0}.opt label{flex:1;margin:0;text-transform:none;letter-spacing:0;font-size:1rem;color:var(--navy);border:1.5px solid var(--line);border-radius:12px;padding:10px;text-align:center;cursor:pointer}
+.opt input{display:none}.opt input:checked+span{font-weight:600}.opt label:has(input:checked){background:var(--navy);color:var(--card);border-color:var(--navy)}
+form .btn{width:100%;margin-top:20px}
+#mute{position:fixed;z-index:20;bottom:calc(18px + env(safe-area-inset-bottom,0px));right:16px;width:46px;height:46px;border-radius:50%;border:0;background:var(--navy);color:var(--card);font-size:1.2rem;cursor:pointer;display:none;box-shadow:0 6px 16px #0003}
+</style>
+</head>
+<body>
+<button id="mute" aria-label="sound">🔊</button>
+<!-- لأغنية: ضع الملف بجانب هذه الصفحة باسم song.mp3 -->
+<audio id="aud" loop preload="auto" src="song.mp3"></audio>
+
+<section id="hero">
+  <div class="frame rv">
+    <svg id="flo" viewBox="0 0 400 150"></svg>
+    <div class="mono">M &amp; R</div>
+    <div class="sm" style="margin-top:8px">We are getting married</div>
+    <div class="script names">Mohamed<span class="amp">&amp;</span>Rawan</div>
+    <div class="date">November 15, 2026</div>
+    <div class="sm" style="margin-top:6px">Port Said · Egypt</div>
+  </div>
+  <div class="hint">⌄</div>
+</section>
+
+<section>
+  <svg class="lights rv" viewBox="0 0 560 90"><path d="M0 14 Q70 74 140 24 T280 24 T420 24 T560 14" fill="none" stroke="#7a6a5a" stroke-width="1.6"/></svg>
+  <h2 class="rv">Countdown</h2>
+  <div class="cd rv"><div><b id="d">0</b><small>DAYS</small></div><div><b id="h">0</b><small>HOURS</small></div><div><b id="m">0</b><small>MINUTES</small></div><div><b id="s">0</b><small>SECONDS</small></div></div>
+  <p class="rv" style="margin-top:34px;font-size:1.6rem" >We’re so happy to celebrate<br>this day with you.</p>
+  <p class="rv" dir="rtl" style="font-family:'Cairo',sans-serif;font-size:1rem;color:var(--blue)">بارك الله لنا ولكم، وجمع بيننا في خير</p>
+</section>
+
+<section>
+  <h2 class="rv">The Venue</h2>
+  <div class="arch rv">
+    <div class="sm">Location</div>
+    <h3>Orkida Palace Hall</h3>
+    <p>Al Arab, Port Said</p>
+    <a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/5Y3rjFUxxcEViT3r7?g_st=ac">View on Google Maps</a>
+  </div>
+  <div class="tl rv"><div><div class="sm">Day</div><b>Sunday</b></div><div><div class="sm">Date</div><b>15 Nov</b></div><div><div class="sm">Time</div><b>8 PM</b></div></div>
+</section>
+
+<section>
+  <h2 class="rv">RSVP</h2>
+  <p class="sm rv">Kindly let us know</p>
+  <form id="f" class="rv">
+    <label>Will you attend?</label>
+    <div class="opt"><label><input type="radio" name="a" value="Yes, I'll be attending" checked><span>Yes, I’ll be there</span></label><label><input type="radio" name="a" value="No, I'm sorry"><span>No, I’m sorry</span></label></div>
+    <label>Full name</label><input type="text" id="nm" placeholder="Your name" required>
+    <label>Number of guests</label><input type="number" id="gs" min="1" value="1">
+    <label>Message for the couple</label><textarea id="ms" placeholder="Share your wishes…"></textarea>
+    <button class="btn fill" type="submit">Send RSVP via WhatsApp</button>
+  </form>
+  <p class="script" style="font-size:2.4rem;margin-top:34px;color:var(--rose)">With love ♥</p>
+</section>
+
+<script>
+// ===== بيانات قابلة للتعديل =====
+const WEDDING="2026-11-15T20:00:00";
+const WHATSAPP="201023285753";           // رقم العروسين بصيغة دولية بدون + (مثال: 201001234567). لو فاضي المدعو يختار جهة الاتصال
+// ================================
+const $=id=>document.getElementById(id);
+// reveal
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting)e.target.classList.add("in")}),{threshold:.25});
+document.querySelectorAll(".rv").forEach(e=>io.observe(e));
+// countdown
+function tick(){const t=Math.max(0,new Date(WEDDING)-new Date())/1000|0;$("d").textContent=t/86400|0;$("h").textContent=t%86400/3600|0;$("m").textContent=t%3600/60|0;$("s").textContent=t%60}
+tick();setInterval(tick,1000);
+// svg art
+const NS="http://www.w3.org/2000/svg";const mk=(p,t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);p.appendChild(e);return e};
+function bloom(g,x,y,r,c1,c2){const f=mk(g,"g",{transform:`translate(${x} ${y})`});for(let i=0;i<6;i++)mk(f,"ellipse",{cx:0,cy:-r*.6,rx:r*.36,ry:r*.6,fill:i%2?c1:c2,opacity:.9,stroke:"#fff","stroke-width":1,transform:`rotate(${i*60})`});mk(f,"circle",{r:r*.2,fill:"#d8b46a"})}
+function leaf(g,x,y,l,rot){mk(g,"path",{d:`M0 0 C${l*.3} ${-l*.3} ${l*.8} ${-l*.2} ${l} 0 C${l*.8} ${l*.2} ${l*.3} ${l*.3} 0 0Z`,fill:"#8aa57a",opacity:.85,transform:`translate(${x} ${y}) rotate(${rot})`})}
+const fl=$("flo");
+[[70,70,-160],[130,56,-150],[200,40,-90],[270,56,-30],[330,70,-20],[40,90,-170],[360,90,10]].forEach(a=>leaf(fl,a[0],a[1],46,a[2]));
+[[200,56,34,"#e9b8b4","#f4d2cf"],[135,72,26,"#9fb2d3","#c3d0e8"],[265,72,26,"#9fb2d3","#c3d0e8"],[85,92,20,"#f4d2cf","#e9b8b4"],[315,92,20,"#f4d2cf","#e9b8b4"],[40,112,16,"#c3d0e8","#9fb2d3"],[360,112,16,"#c3d0e8","#9fb2d3"]].forEach(a=>bloom(fl,...a.slice(0,3),a[3],a[4]));
+const L=document.querySelector(".lights");
+[[40,38],[105,58],[175,30],[245,22],[315,28],[385,30],[455,30],[525,22]].forEach(([x,y])=>{mk(L,"circle",{cx:x,cy:y+10,r:7,fill:"#ffd566"});mk(L,"circle",{cx:x,cy:y+10,r:13,fill:"#ffd566",opacity:.25})});
+// RSVP -> WhatsApp
+$("f").onsubmit=e=>{e.preventDefault();
+  const a=document.querySelector('input[name=a]:checked').value;
+  const txt=`RSVP — Mohamed & Rawan Wedding\nName: ${$("nm").value}\n${a}\nGuests: ${$("gs").value}\n${$("ms").value?("Message: "+$("ms").value):""}`;
+  window.open(`https://wa.me/${WHATSAPP}?text=${encodeURIComponent(txt)}`,"_blank")};
+// music
+const a=$("aud");a.addEventListener("canplay",()=>{$("mute").style.display="block"});
+document.addEventListener("click",()=>{if(a.paused&&a.getAttribute("src")&&$("mute").textContent==="🔊")a.play().catch(()=>{})},{once:true});
+$("mute").onclick=e=>{e.stopPropagation();if(a.paused){a.play().catch(()=>{});$("mute").textContent="🔊"}else{a.pause();$("mute").textContent="🔇"}};
+</script>
+</body>
+</html>
